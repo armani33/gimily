@@ -1,1 +1,8 @@
 // Specific CSS for your home-page
+.wrapper{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 93vh;
+background-color: $blue;
+}

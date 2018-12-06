@@ -6,6 +6,7 @@
         <%= image_tag('gimily_blue.svg', class: "navbar-gimily-brand", alt: 'logo') %>
       <% end %>
     </div>
+
     <!-- Right Section -->
     <% if user_signed_in? %>
       <div class="navbar-gimily-middle">
@@ -15,12 +16,20 @@
       <!-- Sign in section -->
       <div class="navbar-sign-in">
         <%= form_for(:user, :url => session_path(:user)) do |f| %>
-          <%= f.text_field :email, placeholder: 'Email or Phone', class: 'email-input' %>
-          <%= f.password_field :password, placeholder: 'Password', class: 'pwd-input' %>
-          <%= f.submit 'Log in', class: 'submit-Log-in'%>
-          <%= f.submit 'Register', class: 'submit-Register'%>
+          <div class="sign-in-form">
+            <p class="alert"><%= alert %></p>
+            <%= f.text_field :email, placeholder: 'Email or Phone', class: 'email-input' %>
+            <div class="password-content">
+              <%= f.password_field :password, placeholder: 'Password', class: 'pwd-input' %>
+              <%= link_to "Forgot password **** ?", new_password_path(:user), class: 'forgot-pwd' %>
+            </div>
+            <%= f.check_box :remember_me, class: 'remember_me' %>
+            <%= f.submit 'Log in', class: 'submit-Log-in'%>
+            <%= link_to('Register', new_user_registration_path, { :class=>"submit-Register" }) %>
+          </div>
         <% end %>
       </div>
     <% end %>
+
   </div>
 </div>
