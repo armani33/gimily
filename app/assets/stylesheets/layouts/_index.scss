@@ -1,5 +1,13 @@
-// Import your layouts CSS files here.
-// Examples:
-// @import "dashboard";
-// @import "profile";
-// @import "map";
+// -----Global-----
+*{
+  border: 0px;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body{
+  background-color: $blue;
+}
