@@ -17,7 +17,7 @@
 }
 /* Logo */
 .brand img {
-  height: 33px;
+  height: 30px;
 }
 
 /* User Avatar */
@@ -64,6 +64,8 @@
   font-size: 11px;
   color: white;
   text-decoration: none;
+  z-index: 1;
+
 }
 .submit-Log-in{
   padding: 4.5px 18px;
