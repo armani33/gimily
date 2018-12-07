@@ -21,7 +21,7 @@
             <%= f.text_field :email, placeholder: 'Email or Phone', class: 'email-input' %>
             <div class="password-content">
               <%= f.password_field :password, placeholder: 'Password', class: 'pwd-input' %>
-              <%= link_to "Forgot password **** ?", new_password_path(:user), class: 'forgot-pwd' %>
+              <%= link_to "Forgot password **** ?", new_password_path(:user), class: "forgot-pwd" %>
             </div>
             <%= f.check_box :remember_me, class: 'remember_me' %>
             <%= f.submit 'Log in', class: 'submit-Log-in'%>
@@ -30,6 +30,5 @@
         <% end %>
       </div>
     <% end %>
-
   </div>
 </div>
