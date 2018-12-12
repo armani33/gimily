@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2018_12_05_220533) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "addresses", force: :cascade do |t|
     t.string "full_name"
     t.string "street"
@@ -20,15 +23,15 @@ ActiveRecord::Schema.define(version: 2018_12_05_220533) do
     t.integer "zip_code"
     t.string "country"
     t.integer "phone_number"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_addresses_on_user_id"
   end
 
   create_table "groupe_baskets", force: :cascade do |t|
-    t.integer "groupe_id"
-    t.integer "item_id"
+    t.bigint "groupe_id"
+    t.bigint "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["groupe_id"], name: "index_groupe_baskets_on_groupe_id"
@@ -37,7 +40,7 @@ ActiveRecord::Schema.define(version: 2018_12_05_220533) do
 
   create_table "groupes", force: :cascade do |t|
     t.string "title"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_groupes_on_user_id"
@@ -56,8 +59,8 @@ ActiveRecord::Schema.define(version: 2018_12_05_220533) do
   end
 
   create_table "members", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "groupe_id"
+    t.bigint "user_id"
+    t.bigint "groupe_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["groupe_id"], name: "index_members_on_groupe_id"
@@ -79,4 +82,10 @@ ActiveRecord::Schema.define(version: 2018_12_05_220533) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "addresses", "users"
+  add_foreign_key "groupe_baskets", "groupes"
+  add_foreign_key "groupe_baskets", "items"
+  add_foreign_key "groupes", "users"
+  add_foreign_key "members", "groupes"
+  add_foreign_key "members", "users"
 end

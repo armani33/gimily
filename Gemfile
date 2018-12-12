@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.4'
 
+gem 'pg'
 gem 'faker'
 gem 'devise'
 gem 'font-awesome-sass', '~> 5.0.9'
