@@ -1,0 +1,19 @@
+<div class="cards-wrapper">
+  <% @items.each do |item| %>
+    <div class="cards-container">
+      <div class="card-nav">
+        <%= image_tag("heart-bookmark.png", class: "heart-bookmark") %>
+        <%= link_to root_path, class: "url-item" do %>
+          <div class="link-page">
+            <p>item.page_url</p>
+            <%= image_tag("website_link.png", class: "website_link") %>
+          </div>
+        <% end %>
+      </div>
+      <div class="card-body">
+      </div>
+      <div class="card-footer">
+      </div>
+    </div>
+  <% end %>
+</div>
