@@ -6,10 +6,13 @@ Item.destroy_all
 
 puts 'Creating 100 fake itemss...'
 100.times do
-  task = Task.new({
-    title: Faker::Cannabis.type,
-    details: Faker::Cannabis.health_benefit,
+  item = Item.new({
+    page_url: Item::URL.sample,
+    title: Faker::Commerce.product_name,
+    price: Faker::Commerce.price,
+    text_description: Faker::Cannabis.health_benefit,
+    images: "https://picsum.photos/282/325/?random"
     }
   )
-  task.save!
+  item.save!
 end

@@ -1,6 +1,7 @@
 // Specific CSS for your home-page
 .wrapper{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
