@@ -1,18 +1,75 @@
 <div class="navbar-gimily <%if !signed_in? %> <%= 'navbar-gimily-sign-in' %> <% end %>">
-  <div class="navbar-content">
-    <!-- Left Section: Logo -->
-    <div class="brand">
-      <%= link_to root_path, { :class=>"brand-link" } do %>
-        <%= image_tag('gimily_blue.svg', class: "navbar-gimily-brand", alt: 'logo') %>
-      <% end %>
-    </div>
-
-    <!-- Right Section -->
+  <div class="navbar-content home-container">
+    <!-- Navbar When Sign in -->
     <% if user_signed_in? %>
-      <div class="navbar-gimily-middle">
-        <!-- .... -->
+      <!-- Left Section: Logo -->
+      <div class="left-container">
+        <div class="brand">
+          <%= link_to root_path, { :class=>"brand-link" } do %>
+            <% if signed_in? %>
+              <%= image_tag('gimily_white.svg', class: "navbar-gimily-brand", alt: 'logo') %>
+            <% else %>
+              <%= image_tag('gimily_blue.svg', class: "navbar-gimily-brand", alt: 'logo') %>
+            <% end %>
+          <% end %>
+        </div>
       </div>
+        <!-- Middle Section -->
+      <div class="navbar-middle">
+        <form class="search-bar-navbar" action="/">
+          <input type="text" placeholder="Search any objects online" name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+        <!-- Right Section -->
+      <div class="navbar-right">
+        <!-- profil link -->
+          <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction()">
+              <%# cl_image_tag(current_user.avatar, class: "avatar-navbar") %>
+              <div class="profile-nav">
+                <%= image_tag('http://i.pravatar.cc/300', class: "avatar-navbar") %>
+                <p>Armand</p>
+              </div>
+            </button>
+            <div class="dropdown-content" id="myDropdown">
+              <%= link_to('Profile', destroy_user_session_path, method: :delete) %>
+              <%= link_to('Log Out', destroy_user_session_path, method: :delete) %>
+            </div>
+          </div>
+        <!-- icon link -->
+          <ul class="icon-link">
+              <!-- friends picture link -->
+            <li id="friends-icon">
+              <%= link_to root_path do %>
+                  <%= image_tag('friend-icon-white.png', class: 'friends-button-navbar') %>
+              <% end %>
+            </li>
+            <!-- Message picture link -->
+            <li id="message-icon">
+              <%= link_to root_path do %>
+                <%= image_tag('chat_message.png', class: 'messages-button-navbar') %>
+              <% end %>
+            </li>
+            <!-- notification picture link -->
+            <li id="notification-icon">
+              <%= link_to root_path do %>
+                <%= image_tag('notif_bell.png', class: 'notifs-button-navbar') %>
+              <% end %>
+            </li>
+          </ul>
+      </div>
+    <!-- *******Navbar When NOT Sign in******* -->
     <% else %>
+      <div class="brand">
+        <%= link_to root_path, { :class=>"brand-link" } do %>
+          <% if signed_in? %>
+            <%= image_tag('gimily_white.svg', class: "navbar-gimily-brand", alt: 'logo') %>
+          <% else %>
+            <%= image_tag('gimily_blue.svg', class: "navbar-gimily-brand", alt: 'logo') %>
+          <% end %>
+        <% end %>
+      </div>
       <!-- Sign in section -->
       <div class="navbar-sign-in">
         <%= form_for(:user, :url => session_path(:user)) do |f| %>
@@ -32,3 +89,34 @@
     <% end %>
   </div>
 </div>
+
+
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.path.some((el) => {
+    return el.classList && el.classList.contains("dropbtn");
+  })) {
+    var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
