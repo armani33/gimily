@@ -3,9 +3,16 @@
     <div class="banner">
        <%= render "shared/bannerhome" %>
     </div>
-  <% end %>
-  <div class="home-container">
     <%= render "shared/all_items" %>
-  </div>
-
+  <% else %>
+    <div class="home-container">
+      <div class="cart-container">
+        <%= image_tag("chariot_circle.png", class: "cart_link") %>
+      </div>
+      <div class="poeple-cloud-container">
+        <%= image_tag("cloud_people_search_blue.png", class: "poeple-cloud-link") %>
+      </div>
+      <%= render "shared/all_items" %>
+    </div>
+  <% end %>
 </div>

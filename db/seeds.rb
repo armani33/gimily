@@ -11,7 +11,7 @@ puts 'Creating 100 fake itemss...'
     title: Faker::Commerce.product_name,
     price: Faker::Commerce.price,
     text_description: Faker::Cannabis.health_benefit,
-    images: "https://picsum.photos/282/325/?random"
+    images: "https://picsum.photos/292/330/?random"
     }
   )
   item.save!

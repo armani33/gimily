@@ -2,12 +2,18 @@
   <div class="navbar-content home-container">
     <!-- Navbar When Sign in -->
     <% if user_signed_in? %>
+      <!-- Before Logo -->
+      <div class="bookmarks-link">
+        <%= link_to root_path do %>
+          <%= image_tag('bookmarks.png', class: "bookmarks-link-image", alt: 'bookmarks') %>
+        <% end %>
+      </div>
       <!-- Left Section: Logo -->
       <div class="left-container">
         <div class="brand">
           <%= link_to root_path, { :class=>"brand-link" } do %>
             <% if signed_in? %>
-              <%= image_tag('gimily_white.svg', class: "navbar-gimily-brand", alt: 'logo') %>
+              <%= image_tag('gimilyWhite.svg', class: "navbar-gimily-brand", alt: 'logo') %>
             <% else %>
               <%= image_tag('gimily_blue.svg', class: "navbar-gimily-brand", alt: 'logo') %>
             <% end %>
@@ -64,7 +70,7 @@
       <div class="brand">
         <%= link_to root_path, { :class=>"brand-link" } do %>
           <% if signed_in? %>
-            <%= image_tag('gimily_white.svg', class: "navbar-gimily-brand", alt: 'logo') %>
+            <%= image_tag('gimilyWhite.svg', class: "navbar-gimily-brand", alt: 'logo') %>
           <% else %>
             <%= image_tag('gimily_blue.svg', class: "navbar-gimily-brand", alt: 'logo') %>
           <% end %>

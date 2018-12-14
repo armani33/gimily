@@ -1,3 +1,6 @@
+<% if signed_in? %>
+  <div class="behind-navbar"></div>
+<% end %>
 <div class="cards-wrapper">
   <% @items.each do |item| %>
     <div class="cards-container">
@@ -5,16 +8,30 @@
         <%= image_tag("heart-bookmark.png", class: "heart-bookmark") %>
         <%= link_to item.page_url, class: "url-item" do %>
           <div class="link-page">
-            <p>www.article.com</p>
+            <p>Website</p>
             <%= image_tag("website_link.png", class: "website_link") %>
           </div>
         <% end %>
       </div>
       <div class="card-body">
-        <%= image_tag(item.images, class: "item-images") %>
+        <div class="price-tag">
+          <p><%= item.price %>$</p>
+        </div>
+        <div>
+          <%= image_tag(item.images, class: "item-images") %>
+        </div>
       </div>
       <div class="card-footer">
-
+        <div class="footer-link">
+          <%= link_to root_path, class: "comment-button" do %>
+            <%= image_tag("comment_card.png", alt: "comment", class: "icon-footer-comment")%>
+          <% end %>
+        </div>
+        <div class="footer-link">
+          <%= link_to root_path, class: "cart-button" do %>
+            <%= image_tag("cart_chariot.svg", alt: "cart", class: "icon-footer-cart")%>
+          <% end %>
+        </div>
       </div>
     </div>
   <% end %>

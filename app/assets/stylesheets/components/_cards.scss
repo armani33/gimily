@@ -1,3 +1,7 @@
+.behind-navbar{
+  height: 55px;
+  width:100%;
+}
 .cards-wrapper{
   display: flex;
   flex-wrap: wrap;
@@ -11,34 +15,106 @@
   margin: 5px;
   border: 1px solid #E6E5E5;
   border-radius: 3px;
-  box-shadow: 0 0 2px rgba(30, 30, 30, 0.2)
+  box-shadow: 0 0 2px rgba(30, 30, 30, 0.2);
+  display: flex;
+  flex-direction: column;
 }
 // ****navbar card****
 .card-nav{
-width: 100%;
-height: 30px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: #F7F7F7;
+  flex-basis: 8.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $light-grey;
+}
+.card-nav a{
+  text-decoration: none;
+  color: $blue;
 }
 .link-page{
   display: flex;
+  align-items: center;
+  padding: 2px 5px;
+  border: 1px solid $light-grey;
+  background-color: transparent;
+  margin-right: 3px;
+  border-radius: 5px;
+  font-family: $lato-font;
+  font-size: 12px;
 }
 .heart-bookmark{
   width: 30px;
   height: 30px;
 }
 .website_link{
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   margin-right: 3px;
   margin-left: 5px;
 }
 // ****Body card****
 .card-body{
-  padding: 5px;
+  flex-basis: 83%;
+  position: relative;
+}
+.price-tag{
+  width: 70px;
+  height: 30px;
+  background-color: $blue;
+  font-family: $lato-font;
+  font-size: 14px;
+  color: white;
+  bottom: 4.5px;
+  right: 0;
+  border-radius: 5px 0 0 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.card-body img{
+  background-size: cover;
+}
+// ****Footer card****
+.card-footer{
+  flex-basis: 9%;
+  display: flex;
+  align-items: center;
+}
+.footer-link{
+  padding: 0;
+  height: 100%;
+  flex-basis: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.footer-link:hover{
+  background-color: $light-grey;
+  border-radius: 0 0 3px 3px;
+}
+
+.comment-button img{
+  width: 23px;
+}
+.cart-button img{
+  width: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

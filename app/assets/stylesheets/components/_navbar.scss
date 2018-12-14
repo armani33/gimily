@@ -6,6 +6,11 @@
   height: 55px;
   display: flex;
   align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  position: fixed;
 }
 .navbar-gimily-not-sign-in{
   background-color: white;
@@ -23,9 +28,19 @@
   justify-content: center;
   height: 100%;
 }
+/* Bookmarks */
+.bookmarks-link{
+  position: absolute;
+  top: 28px;
+  left: 55px;
+}
+.bookmarks-link-image{
+  width: 30px;
+}
 /* Logo */
 .brand img {
   height: 40px;
+  margin-left: 8px;
 }
 
 /* User Avatar */
@@ -46,7 +61,7 @@
 }
 .search-bar-navbar button{
   background-color: $light-grey;
-  width: 50px;
+  width: 60px;
   height: 40px;
   border-radius: 0 2px 2px 0;
 }
@@ -143,9 +158,10 @@
   margin-top: 10px;
   margin-left: 15px;
   font-family: $body-font;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 13px;
   color: white;
+  opacity: 0.8;
   text-decoration: none;
   z-index: 1;
 
