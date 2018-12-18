@@ -1,11 +1,13 @@
 <div class="wrapper">
   <% if !signed_in? %>
     <div class="banner">
-       <%= render "shared/bannerhome" %>
+      <%= render "shared/bannerhome" %>
     </div>
-    <%= render "shared/all_items" %>
+    <div class="items-container">
+      <%= render "shared/all_items" %>
+    </div>
   <% else %>
-    <div class="home-container">
+    <!-- <div class="home-container">
       <div class="cart-container">
         <%= image_tag("chariot_circle.png", class: "cart_link") %>
       </div>
@@ -13,6 +15,6 @@
         <%= image_tag("cloud_people_search_blue.png", class: "poeple-cloud-link") %>
       </div>
       <%= render "shared/all_items" %>
-    </div>
+    </div> -->
   <% end %>
 </div>

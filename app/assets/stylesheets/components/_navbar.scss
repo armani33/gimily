@@ -1,19 +1,15 @@
 /* Main navbar */
 .navbar-gimily {
-  box-shadow: 0 0 5px rgba(0,0,0,0.7);
-  background-color: $blue;
+  background-color: white;
   transition: all 0.3s ease;
-  height: 55px;
+  height: 70px;
   display: flex;
   align-items: center;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  position: fixed;
 }
 .navbar-gimily-not-sign-in{
-  background-color: white;
+
+
+
 }
 .navbar-content{
   width: 100%;
@@ -22,27 +18,47 @@
   align-items: center;
   justify-content: space-between;
 }
-.left-container{
+.left-side{
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
 }
-/* Bookmarks */
-.bookmarks-link{
-  position: absolute;
-  top: 28px;
-  left: 55px;
-}
-.bookmarks-link-image{
-  width: 30px;
-}
 /* Logo */
 .brand img {
-  height: 40px;
-  margin-left: 8px;
+  height: 45px;
+  // margin-left: 30px;
 }
-
+/* Menu-link */
+.menu-link-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+}
+.menu-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 40px;
+  text-decoration: none;
+  color: black;
+}
+.menu-link p{
+  font-family: $body-font;
+}
+.community-icon-navbar{
+  width: 21px;
+  margin-right: 20px;
+}
+.messages-icon-navbar{
+  width: 19px;
+  margin-right: 25px;
+}
+.box-items-icon-navbar{
+  width: 20px;
+  margin-right: 23px;
+}
 /* User Avatar */
 .avatar-navbar{
   height: 35px;
@@ -105,148 +121,21 @@
 .profile-nav p {
   margin: 0;
 }
-// ******icon link*****
-.icon-link{
-  list-style: none;
-  display: flex;
-  align-items: center;
-}
-.icon-link img{
-  margin: 0 14px;
-}
-.friends-button-navbar{
-  width: 33px;
-}
-.messages-button-navbar{
-  width: 33px;
-}
-.notifs-button-navbar{
-  width: 19px;
-}
-/* Sign in section */
-.sign-in-form{
-  display: flex;
-  align-items: center;
-}
-.email-input{
-  padding: 3px;
-  border-radius: 2px;
-  border: 1px solid $light-grey;
-  outline: none;
-  color: black;
-  font-size: 13px;
-  height: 25px;
-  width: 200px;
-}
-.password-content{
-  display: flex;
-  flex-direction: column;
-  margin-left: 10px;
-  margin-bottom: -28px;
-}
-.pwd-input{
-  padding: 3px;
-  border-radius: 2px;
-  border: 1px solid $light-grey;
-  outline: none;
-  color: black;
-  font-size: 13px;
-  height: 25px;
-  width: 200px;
-}
-.forgot-pwd{
-  margin-top: 10px;
-  margin-left: 15px;
+.login-link{
+  padding: 7px 15px;
   font-family: $body-font;
-  font-weight: 300;
-  font-size: 13px;
-  color: white;
-  opacity: 0.8;
+  color: black;
   text-decoration: none;
-  z-index: 1;
-
+  margin-right: 20px;
 }
-.submit-Log-in{
-  padding: 8px 24px;
-  background-color: $blue;
-  border: 1px solid $blue;
-  font-family: $logo-font;
-  color: white;
-  font-size: 11px;
-  border-radius: 2px;
-  margin-left: 10px;
-}
-.submit-Log-in:hover{
-  background-color: $grey;
-}
-.submit-Register{
-  padding: 8px 16px;
-  background-color: white;
-  border: 1px solid $blue;
-  font-family: $logo-font;
-  color: $blue;
-  font-size: 11px;
-  border-radius: 2px;
-  margin-left: 10px;
+.sing-in-link{
+  padding: 7px 15px;
+  font-family: $body-font;
+  color: black;
   text-decoration: none;
+  border: 2px solid $light-blue;
+  border-radius: 5px;
 }
-.submit-Register:hover{
-  background-color: $blue;
-  color: white;
-}
-.remember_me{
-  margin-left: 10px;
-  margin-bottom: 3px;
-}
-// Placeholder navbar
-
-.search-bar-navbar ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: $light-grey;
-  font-size: 14px;
-  padding-left: 10px;
-  line-height: 30px;
-}
-.search-bar-navbar ::-moz-placeholder { /* Firefox 19+ */
-  color: $light-grey;
-  font-size: 14px;
-  padding-left: 10px;
-  line-height: 30px;
-}
-.search-bar-navbar :-ms-input-placeholder { /* IE 10+ */
-  color: $light-grey;
-  font-size: 14px;
-  padding-left: 10px;
-}
-.search-bar-navbar :-moz-placeholder { /* Firefox 18- */
-  color: $light-grey;
-  font-size: 14px;
-  padding-left: 10px;
-}
-
-
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: $light-grey;
-  font-size: 11px;
-  padding-left: 10px;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color: $light-grey;
-  font-size: 11px;
-  padding-left: 10px;
-}
-:-ms-input-placeholder { /* IE 10+ */
-  color: $light-grey;
-  font-size: 11px;
-  padding-left: 10px;
-}
-:-moz-placeholder { /* Firefox 18- */
-  color: $light-grey;
-  font-size: 11px;
-  padding-left: 10px;
-}
-
-
-
 // ******Dropdown******
 
 .dropdown {

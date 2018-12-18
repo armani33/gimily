@@ -1,13 +1,7 @@
 <div class="navbar-gimily <%if !signed_in? %> <%= 'navbar-gimily-not-sign-in' %> <% end %>">
-  <div class="navbar-content home-container">
+  <div class="navbar-content content-container">
     <!-- Navbar When Sign in -->
     <% if user_signed_in? %>
-      <!-- Before Logo -->
-      <div class="bookmarks-link">
-        <%= link_to root_path do %>
-          <%= image_tag('bookmarks.png', class: "bookmarks-link-image", alt: 'bookmarks') %>
-        <% end %>
-      </div>
       <!-- Left Section: Logo -->
       <div class="left-container">
         <div class="brand">
@@ -39,58 +33,42 @@
               </div>
             </button>
             <div class="dropdown-content" id="myDropdown">
-              <%= link_to('Profile', destroy_user_session_path, method: :delete) %>
+              <%= link_to('Profile', root_path) %>
               <%= link_to('Log Out', destroy_user_session_path, method: :delete) %>
             </div>
           </div>
-        <!-- icon link -->
-          <ul class="icon-link">
-              <!-- friends picture link -->
-            <li id="friends-icon">
-              <%= link_to root_path do %>
-                  <%= image_tag('friend-icon-white.png', class: 'friends-button-navbar') %>
-              <% end %>
-            </li>
-            <!-- Message picture link -->
-            <li id="message-icon">
-              <%= link_to root_path do %>
-                <%= image_tag('chat_message.png', class: 'messages-button-navbar') %>
-              <% end %>
-            </li>
-            <!-- notification picture link -->
-            <li id="notification-icon">
-              <%= link_to root_path do %>
-                <%= image_tag('notif_bell.png', class: 'notifs-button-navbar') %>
-              <% end %>
-            </li>
-          </ul>
       </div>
     <!-- *******Navbar When NOT Sign in******* -->
     <% else %>
-      <div class="brand">
-        <%= link_to root_path, { :class=>"brand-link" } do %>
-          <% if signed_in? %>
-            <%= image_tag('gimilyWhite.svg', class: "navbar-gimily-brand", alt: 'logo') %>
-          <% else %>
-            <%= image_tag('gimily_blue.svg', class: "navbar-gimily-brand", alt: 'logo') %>
+      <div class="left-side">
+        <div class="brand">
+          <%= link_to root_path, { :class=>"brand-link" } do %>
+            <%= image_tag('G_logo.png', class: "navbar-gimily-brand", alt: 'logo') %>
           <% end %>
-        <% end %>
+        </div>
+
+        <div class="menu-link-content">
+            <!-- Community link -->
+            <%= link_to root_path, class: "menu-link" do %>
+              <%= image_tag('community_black.png', class: 'icon-navbar community-icon-navbar') %>
+              <p> COMMUNITY</p>
+            <% end %>
+          <!-- Messages link -->
+            <%= link_to root_path, class: "menu-link" do %>
+              <%= image_tag('messages.png', class: 'icon-navbar messages-icon-navbar') %>
+              <p>MESSAGES</p>
+            <% end %>
+          <!-- Items link -->
+            <%= link_to root_path, class: "menu-link" do %>
+              <%= image_tag('box-items.png', class: 'icon-navbar box-items-icon-navbar') %>
+              <p>ITEMS</p>
+            <% end %>
+        </div>
       </div>
       <!-- Sign in section -->
       <div class="navbar-sign-in">
-        <%= form_for(:user, :url => session_path(:user)) do |f| %>
-          <div class="sign-in-form">
-            <p class="alert"><%= alert %></p>
-            <%= f.text_field :email, placeholder: 'Email or Phone', class: 'email-input' %>
-            <div class="password-content">
-              <%= f.password_field :password, placeholder: 'Password', class: 'pwd-input' %>
-              <%= link_to "Forgot password **** ?", new_password_path(:user), class: "forgot-pwd" %>
-            </div>
-            <%= f.check_box :remember_me, class: 'remember_me' %>
-            <%= f.submit 'Log in', class: 'submit-Log-in'%>
-            <%= link_to('Register', new_user_registration_path, { :class=>"submit-Register" }) %>
-          </div>
-        <% end %>
+        <%= link_to('LOG IN', log_in_path, class: "login-link" ) %>
+        <%= link_to('SIGN IN', new_user_registration_path, class: "sing-in-link" ) %>
       </div>
     <% end %>
   </div>
