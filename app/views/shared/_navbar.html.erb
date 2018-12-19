@@ -3,17 +3,12 @@
     <!-- Navbar When Sign in -->
     <% if user_signed_in? %>
       <!-- Left Section: Logo -->
-      <div class="left-container">
+      <div class="left-side">
         <div class="brand">
           <%= link_to root_path, { :class=>"brand-link" } do %>
-            <% if signed_in? %>
-              <%= image_tag('gimilyWhite.svg', class: "navbar-gimily-brand", alt: 'logo') %>
-            <% else %>
-              <%= image_tag('gimily_blue.svg', class: "navbar-gimily-brand", alt: 'logo') %>
-            <% end %>
+            <%= image_tag('G_logo.png', class: "navbar-gimily-brand", alt: 'logo') %>
           <% end %>
         </div>
-      </div>
         <!-- Middle Section -->
       <div class="navbar-middle">
         <form class="search-bar-navbar" action="/">
@@ -61,7 +56,7 @@
           <!-- Items link -->
             <%= link_to root_path, class: "menu-link" do %>
               <%= image_tag('box-items.png', class: 'icon-navbar box-items-icon-navbar') %>
-              <p>ITEMS</p>
+              <p>MY ITEMS</p>
             <% end %>
         </div>
       </div>
