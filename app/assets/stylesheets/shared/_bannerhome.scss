@@ -4,7 +4,7 @@
   align-itmes: center;
   height: 65vh;
   width: 100%;
-  background: linear-gradient($light-blue, $dark-blue)
+  background: linear-gradient($light-blue, $dark-blue);
 }
 .content-container{
   width: 100%;
@@ -63,6 +63,8 @@
   width: 600px;
   height: 80px;
   border-radius: 0 5px 5px 0;
+  font-size: 22px;
+  font-family: $body-font;
 }
 
 

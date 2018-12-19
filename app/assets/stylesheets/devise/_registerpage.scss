@@ -4,7 +4,7 @@
   align-items: center;
   height: 94vh;
   width: 100%;
-  background-color: $blue;
+  background: linear-gradient($light-blue, $dark-blue);
 }
 .register_container{
   display: flex;
@@ -15,6 +15,7 @@
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   position: relative;
   color: white;
+  padding: 50px;
 }
 .nav_register{
   display: flex;
@@ -58,31 +59,32 @@
 }
 
 .body_register .form-actions input[type='submit']{
+  margin-top: 25px;
   padding: 8px 20px;
   background-color: $yellow;
   color: white;
   border-radius: 3px;
 }
 .form-inputs ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: $blue;
+  color: $dark-blue;
   font-size: 13px;
   padding-left: 10px;
   opacity: 0.5;
 }
 .form-inputs ::-moz-placeholder { /* Firefox 19+ */
-  color: $blue;
+  color: $dark-blue;
   font-size: 13px;
   padding-left: 10px;
   opacity: 0.5;
 }
 .form-inputs :-ms-input-placeholder { /* IE 10+ */
-  color: $blue;
+  color: $dark-blue;
   font-size: 13px;
   padding-left: 10px;
   opacity: 0.5;
 }
 .form-inputs :-moz-placeholder { /* Firefox 18- */
-  color: $blue;
+  color: $dark-blue;
   font-size: 13px;
   padding-left: 10px;
   opacity: 0.5;
