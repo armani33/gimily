@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_many :addresses, dependent: :destroy
   has_many :groupes, through: :members, dependent: :destroy
-  has_many :groupe_as_admin, :class_name => 'Groupe', :foreign_key => 'user_id'
+  has_many :groupe_as_admin, :class_name => 'Groupe', :foreign_key => 'user_id', dependent: :destroy
 
 
   # Include default devise modules. Others available are:

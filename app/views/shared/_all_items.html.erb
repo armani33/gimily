@@ -5,7 +5,9 @@
   <% @items.each do |item| %>
     <div class="cards-container">
       <div class="card-nav">
-        <%= image_tag("heart-bookmark.png", class: "heart-bookmark") %>
+        <%= link_to root_path do %>
+          <%= image_tag("heart-bookmark.png", class: "heart-bookmark") %>
+        <% end %>
         <%= link_to item.page_url, class: "url-item" do %>
           <div class="link-page">
             <p>Website</p>
@@ -29,7 +31,7 @@
         </div>
         <div class="footer-link">
           <%= link_to root_path, class: "cart-button" do %>
-            <%= image_tag("cart_chariot.svg", alt: "cart", class: "icon-footer-cart")%>
+            <%= image_tag("box_blue.png", alt: "box-cart", class: "icon-footer-box")%>
           <% end %>
         </div>
       </div>
