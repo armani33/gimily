@@ -46,6 +46,10 @@
 }
 .menu-link p{
   font-family: $body-font;
+  font-size: 15px;
+}
+.menu-link:hover{
+  color: $light-blue;
 }
 .community-icon-navbar{
   width: 21px;
@@ -128,6 +132,9 @@
   text-decoration: none;
   margin-right: 20px;
 }
+.login-link:hover{
+  color: $light-blue;
+}
 .sing-in-link{
   padding: 7px 15px;
   font-family: $body-font;
@@ -135,6 +142,10 @@
   text-decoration: none;
   border: 2px solid $light-blue;
   border-radius: 5px;
+}
+.sing-in-link:hover{
+  background-color: $light-blue;
+  color: white;
 }
 // ******Dropdown******
 
