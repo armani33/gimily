@@ -1,7 +1,10 @@
 <div class="wrapper">
   <% if !signed_in? %>
-    <div class="banner">
+    <div class="banner-home">
       <%= render "shared/bannerhome" %>
+    </div>
+    <div class="banner-2">
+      <%= render "shared/bannerwebsites" %>
     </div>
     <div class="items-container">
       <%= render "shared/all_items" %>
