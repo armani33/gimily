@@ -6,46 +6,8 @@
   align-items: center;
   background-color: $background-grey;
 }
-.home-container{
-  margin: 0 230px;
-}
-.cart-container{
-  background-color: $blue;
-  position: absolute;
-  position: fixed;
-  color: white;
-  width: 65px;
-  height:50px;
-  border-radius: 5px 0 0 5px;
-  top: 65px;
-  right: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
 
-}
-.cart-container img{
-  width: 33px;
-}
-.poeple-cloud-container{
-  background-color: white;
-  position: absolute;
-  position: fixed;
-  color: white;
-  width: 65px;
-  height:50px;
-  border-radius: 5px 0 0 5px;
-  top: 130px;
-  right: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
-}
-.poeple-cloud-container img{
-  width: 33px;
-}
+
 
 
 
