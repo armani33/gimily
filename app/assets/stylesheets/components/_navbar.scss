@@ -47,6 +47,7 @@
 .menu-link p{
   font-family: $body-font;
   font-size: 15px;
+  font-weight: 500;
 }
 .menu-link:hover{
   color: $light-blue;
@@ -128,6 +129,7 @@
 .login-link{
   padding: 7px 15px;
   font-family: $body-font;
+  font-weight: 500;
   color: black;
   text-decoration: none;
   margin-right: 20px;
@@ -138,6 +140,7 @@
 .sing-in-link{
   padding: 7px 15px;
   font-family: $body-font;
+  font-weight: 500;
   color: black;
   text-decoration: none;
   border: 2px solid $light-blue;
